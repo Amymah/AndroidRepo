@@ -17,7 +17,8 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 // Run tests from your Robot Framework test folder
-                bat 'robot -d results tests/'
+                bat 'robot Login.robot'
+                bat 'robot User_Login.robot'
             }
         }
 
