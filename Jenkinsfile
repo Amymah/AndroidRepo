@@ -17,8 +17,8 @@ pipeline {
         stage('Start Appium Server') {
             steps {
                 bat 'start /B appium --address 127.0.0.1 --port 4723'
-                // 10 sec wait to make sure server starts
-                bat 'timeout /T 10'
+                // wait for 10 seconds using PowerShell
+                bat 'powershell -Command "Start-Sleep -Seconds 10"'
             }
         }
 
@@ -31,12 +31,9 @@ pipeline {
         stage('Publish Reports') {
             steps {
                 publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
                     reportDir: 'results',
-                    reportFiles: 'report.html',
-                    reportName: 'Robot Framework Test Report'
+                    reportFiles: 'log.html',
+                    reportName: 'Robot Framework Report'
                 ])
             }
         }
