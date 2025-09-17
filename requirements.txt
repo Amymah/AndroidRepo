@@ -1,17 +1,18 @@
 # Core framework
-robotframework==7.0
+# robotframework==7.0
 
 # Appium support for Robot Framework
-robotframework-appiumlibrary==2.0.0
+robotframework-appiumlibrary
 
 # Appium client for Python
-Appium-Python-Client==3.1.1
+# Appium-Python-Client==3.1.1
 
 # Selenium (used internally by AppiumLibrary)
-selenium==4.23.1
+# selenium==4.23.1
 
 # Excel support (if you read/write test data from Excel)
-openpyxl==3.1.5
-
+# openpyxl==3.1.5
+ robotframework-excelsage
+ 
 # Optional: for API testing
-requests==2.32.3
+# requests==2.32.3
