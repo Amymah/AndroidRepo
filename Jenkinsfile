@@ -17,11 +17,8 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                // Tumhare Robot Framework test cases run karna
-                // Agar sab tests run karna ho to:
-                bat 'robot --outputdir results .'
-                // Agar sirf ek file (e.g. Login.robot) run karni ho to:
-                // bat 'robot --outputdir results Login.robot'
+                // Login.robot execute hoga (resources.robot auto-import ho jayega)
+                bat 'robot --outputdir results Login.robot'
             }
         }
 
