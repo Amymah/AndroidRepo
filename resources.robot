@@ -19,7 +19,7 @@ Open SmartRep App
     ...    automationName=${UI_AUTOMATION}
     ...    noReset=true
     ...    autoGrantPermissions=true
-   # ...    adbExecTimeout=60000
+   ...    adbExecTimeout=60000
 
 Close SmartRep App
     Close Application
