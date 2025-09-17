@@ -10,16 +10,18 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // Install all Python dependencies from requirements.txt
-                bat 'pip install --upgrade pip'
-                bat 'pip install -r requirements.txt'
+                // Correct way to upgrade pip in Jenkins on Windows
+                bat 'python -m pip install --upgrade pip'
+                
+                // Install everything from requirements.txt
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Robot Tests') {
             steps {
-                // Run Robot tests and save results in "results" folder
-                bat 'robot Login.robot'
+                // Run tests and save results
+                bat 'python -m robot --outputdir results Login.robot'
             }
         }
 
