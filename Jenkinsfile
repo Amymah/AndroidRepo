@@ -21,7 +21,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 // Run tests and save results
-                bat 'python -m robot --outputdir results Login.robot'
+                bat 'robot Login.robot'
             }
         }
 
