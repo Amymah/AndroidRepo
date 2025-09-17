@@ -29,7 +29,8 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                bat 'robot --outputdir results Login.robot'
+                bat 'robot Login.robot'
+                bat 'robot User_Login.robot'
             }
         }
 
