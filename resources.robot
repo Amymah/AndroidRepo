@@ -2,12 +2,12 @@
 Library    AppiumLibrary
 
 *** Variables ***
-${REMOTE_URL}        http://localhost:4723
+${REMOTE_URL}        http://localhost:4723/wd/hub
 ${PLATFORM_NAME}     Android
 ${DEVICE_NAME}       emulator-5554
 ${APP_PACKAGE}       com.smartrep
 ${APP_ACTIVITY}      com.smartrep.MainActivity
-${UI_AUTOMATION}     uiautomator2
+${UI_AUTOMATION}     UiAutomator2
 
 *** Keywords ***
 Open SmartRep App
@@ -19,6 +19,7 @@ Open SmartRep App
     ...    automationName=${UI_AUTOMATION}
     ...    noReset=true
     ...    autoGrantPermissions=true
+    ...    adbExecTimeout=60000
 
 Close SmartRep App
     Close Application
