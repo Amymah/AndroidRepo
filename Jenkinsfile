@@ -10,15 +10,16 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                // Install all Python dependencies from requirements.txt
+                bat 'pip install --upgrade pip'
                 bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Robot Tests') {
             steps {
-                // Run tests from your Robot Framework test folder
+                // Run Robot tests and save results in "results" folder
                 bat 'robot Login.robot'
-                // bat 'robot User_Login.robot'
             }
         }
 
