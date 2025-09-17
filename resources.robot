@@ -1,12 +1,9 @@
-*** Settings ***
-Library    AppiumLibrary
-
 *** Variables ***
 ${REMOTE_URL}        http://127.0.0.1:4723
 ${PLATFORM_NAME}     Android
 ${DEVICE_NAME}       emulator-5554
 ${APP_PACKAGE}       com.smartrep
-${APP_ACTIVITY}      com.smartrep.MainActivity
+${APP_ACTIVITY}      .MainActivity
 ${UI_AUTOMATION}     UiAutomator2
 
 *** Keywords ***
@@ -20,6 +17,3 @@ Open SmartRep App
     ...    noReset=false
     ...    autoGrantPermissions=true
     ...    adbExecTimeout=60000
-
-Close SmartRep App
-    Close Application
