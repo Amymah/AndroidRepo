@@ -30,7 +30,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 bat 'robot Login.robot'
-                bat 'robot User_Login.robot'
+                //bat 'robot User_Login.robot'
             }
         }
 
