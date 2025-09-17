@@ -17,7 +17,7 @@ Open SmartRep App
     ...    appPackage=${APP_PACKAGE}
     ...    appActivity=${APP_ACTIVITY}
     ...    automationName=${UI_AUTOMATION}
-    ...    noReset=true
+    ...    noReset=false
     ...    autoGrantPermissions=true
     ...    adbExecTimeout=60000
 
