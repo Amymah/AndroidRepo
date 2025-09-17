@@ -1,19 +1,41 @@
-*** Variables ***
-${REMOTE_URL}        http://127.0.0.1:4723
-${PLATFORM_NAME}     Android
-${DEVICE_NAME}       emulator-5554
-${APP_PACKAGE}       com.smartrep
-${APP_ACTIVITY}      .MainActivity
-${UI_AUTOMATION}     UiAutomator2
+*** Settings *** Library AppiumLibrary 
 
-*** Keywords ***
-Open SmartRep App
-    Open Application    ${REMOTE_URL}
-    ...    platformName=${PLATFORM_NAME}
-    ...    deviceName=${DEVICE_NAME}
-    ...    appPackage=${APP_PACKAGE}
-    ...    appActivity=${APP_ACTIVITY}
-    ...    automationName=${UI_AUTOMATION}
-    ...    noReset=false
-    ...    autoGrantPermissions=true
-    ...    adbExecTimeout=60000
+*** Variables ***  
+
+${REMOTE_URL} http://127.0.0.1:4723  
+
+${PLATFORM_NAME} Android 
+
+${DEVICE_NAME} emulator-5554  
+
+${APP_PACKAGE} com.smartrep 
+
+${APP_ACTIVITY} com.smartrep.MainActivity  
+
+${UI_AUTOMATION} UiAutomator2 
+
+*** Keywords ***  
+
+Open SmartRep  
+
+App Open Application ${REMOTE_URL}  
+
+... platformName=${PLATFORM_NAME} 
+
+... deviceName=${DEVICE_NAME}  
+
+... appPackage=${APP_PACKAGE}  
+
+... appActivity=${APP_ACTIVITY} 
+
+... automationName=${UI_AUTOMATION}  
+
+... noReset=false  
+
+... autoGrantPermissions=true  
+
+... adbExecTimeout=60000 
+
+Close SmartRep App  
+
+Close Application
